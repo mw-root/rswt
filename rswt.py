@@ -3,7 +3,10 @@
 
 from __future__ import absolute_import, division, print_function
 
-from os import errno
+try:
+    from os import errno
+except ImportError:
+    import errno
 import serial
 import struct
 
